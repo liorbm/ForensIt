@@ -1,4 +1,4 @@
-# ForensIt - Files Forensic Analysis Tool
+# ForensIt - Forensic Analysis Tool
 
 ![ForensIt Banner](https://img.shields.io/badge/ForensIt-v1.00-blue)
 
