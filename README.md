@@ -1,37 +1,37 @@
-# ForensIt - Forensic Analysis Tool
+# ForensIt -  Forensics Tool
 
 ![ForensIt Banner](https://img.shields.io/badge/ForensIt-v1.00-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-ForensIt is a powerful forensic analysis tool designed to help investigators analyze files and memory dumps efficiently. It provides a comprehensive suite of forensic tools and automated analysis capabilities.
+ForensIt is a comprehensive forensics tool that automates the process of analyzing files and memory dumps using various forensic tools. It provides a user-friendly interface for performing memory analysis and generates detailed reports of the findings.
 
 ## Features
 
-- **Multiple Forensic Tools Integration**:
-  - Volatility 2.6 for memory analysis
-  - Foremost for file carving
-  - Binwalk for file extraction
-  - Bulk-extractor for bulk data extraction
-  - Strings for text pattern extraction
+- **Multiple Forensic Tools Integration**
+  - Volatility
+  - Foremost
+  - Binwalk
+  - Bulk-extractor
+  - Strings
 
-- **Automated Analysis**:
+- **Automated Analysis**
   - Process list extraction
   - Network connection analysis
   - Registry information extraction
-  - File carving capabilities
   - Human-readable string extraction
+  - File carving capabilities
 
-- **User-Friendly Interface**:
-  - Color-coded output for better readability
-  - Interactive menu system
-  - Automated tool installation
-  - Comprehensive reporting
+- **Smart File Location**
+  - System-wide file search
+  - Interactive file selection
+  - Multiple file path support
 
-## Requirements
-
-- Linux-based operating system
-- Root privileges
-- Internet connection (for initial setup)
-- Minimum 2GB RAM (recommended 4GB+ for large memory dumps)
+- **Comprehensive Reporting**
+  - Detailed analysis statistics
+  - Extracted files count
+  - Network information
+  - Volatility analysis results
+  - Timestamped reports
 
 ## Installation
 
@@ -46,7 +46,7 @@ cd ForensIt
 chmod +x ForensIt.sh
 ```
 
-3. Run the script as root:
+3. Run as root:
 ```bash
 sudo ./ForensIt.sh
 ```
@@ -54,40 +54,61 @@ sudo ./ForensIt.sh
 ## Usage
 
 1. Run the script with root privileges
-2. The script will automatically check and install required dependencies
-3. Enter the filename when prompted
-4. Choose from the following analysis options:
-   - 1: Foremost analysis
-   - 2: Binwalk analysis
-   - 3: Bulk-extractor analysis
-   - 4: Strings analysis
-   - 5: Volatility analysis
-   - 6: Run all tools
+2. Enter the filename you want to analyze
+3. Select the file path from the list of found files
+4. Choose the analysis tools you want to use
+5. Review the generated report
+
+## Analysis Options
+
+The tool provides several analysis options:
+
+1. **Foremost** - File carving and recovery
+2. **Binwalk** - File signature analysis
+3. **Bulk-extractor** - Feature extraction
+4. **Strings** - Human-readable string extraction
+5. **Volatility** - Memory analysis
+6. **All Tools** - Comprehensive analysis using all tools
 
 ## Output
 
-The tool creates a structured output directory (`ForensIt-Results/`) containing:
-- Extracted files
-- Process lists
-- Network information
-- Registry data
-- Human-readable strings
-- Comprehensive analysis report
-
-## Report Generation
-
-After analysis, the tool generates:
-- Detailed analysis report
-- Statistics about extracted data
+The tool generates:
+- A timestamped report directory
+- Extracted files and data
+- Analysis statistics
 - Network information (if available)
 - Volatility analysis results
-- All extracted data in a zip archive
+
+## Requirements
+
+- Linux-based operating system
+- Root privileges
+- Internet connection (for initial setup)
+- Required packages:
+  - binwalk
+  - foremost
+  - bulk-extractor
+  - binutils (for strings)
+  - figlet (for banner display)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+- **Lior Biam** - [GitHub Profile](https://github.com/liorbm)
+
+## Acknowledgments
+
+- Volatility Foundation for the Volatility framework
+- All the open-source tools used in this project
+- The digital forensics community for their contributions
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Support
 
-## Author
-
-- **Lior Biam** - [GitHub Profile](https://github.com/liorbm)
+If you find this tool helpful, consider starring the repository and sharing it with others! 
