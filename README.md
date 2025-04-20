@@ -43,12 +43,12 @@ cd ForensIt
 
 2. Make the script executable:
 ```bash
-chmod +x script.sh
+chmod +x ForensIt.sh
 ```
 
 3. Run the script as root:
 ```bash
-sudo ./script.sh
+sudo ./ForensIt.sh
 ```
 
 ## Usage
