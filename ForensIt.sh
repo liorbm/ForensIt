@@ -49,15 +49,36 @@ function vol_install() {
 function file_check() {
     echo -e "${CYAN}[~] Enter the filename you want to analyze: ${NC}"
     read -p "" FILENAME
-    # Find the file only in the script's directory
-    script_dir=$(dirname "$0")
-    filepath="$script_dir/$FILENAME"
-    if [ ! -f "$filepath" ]; then
-        echo -e "${RED}[-] The file does not exist in the script's directory. Check if the filename is correct.${NC}"
+    
+    # Search for the file across the system
+    echo -e "${ORANGE}[~] Searching for $FILENAME across the system...${NC}"
+    found_files=($(find / -name "$FILENAME" 2>/dev/null))
+    
+    if [ ${#found_files[@]} -eq 0 ]; then
+        echo -e "${RED}[-] No files named '$FILENAME' were found on the system.${NC}"
         exit 1
-    else
-        echo -e "${GREEN}[+] File $FILENAME found successfully.${NC}"
     fi
+    
+    # Display found files and let user choose
+    echo -e "${GREEN}[+] Found ${#found_files[@]} files named '$FILENAME':${NC}"
+    for i in "${!found_files[@]}"; do
+        echo -e "${BLUE}$((i+1)). ${found_files[$i]}${NC}"
+    done
+    
+    # Get user's choice
+    while true; do
+        echo -e "${CYAN}[~] Enter the number of the file you want to analyze (1-${#found_files[@]}): ${NC}"
+        read -p "" choice
+        
+        # Check if choice is valid
+        if [[ "$choice" =~ ^[0-9]+$ ]] && [ "$choice" -ge 1 ] && [ "$choice" -le ${#found_files[@]} ]; then
+            FILENAME="${found_files[$((choice-1))]}"
+            echo -e "${GREEN}[+] Selected file: $FILENAME${NC}"
+            break
+        else
+            echo -e "${RED}[-] Invalid choice. Please enter a number between 1 and ${#found_files[@]}.${NC}"
+        fi
+    done
 }
 
 # 1.3 Create a function to install the forensics tools if missing.
