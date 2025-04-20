@@ -5,8 +5,7 @@
 
 ForensIt is a comprehensive forensics tool that automates the process of analyzing files and memory dumps using various forensic tools. It provides a user-friendly interface for performing memory analysis and generates detailed reports of the findings.
 
-![ForensIt-Screenshot-Example](https://github.com/user-attachments/assets/adb6fe79-ef1f-4fca-a54e-bbc704b12c41)
-
+![ForensIt-Screenshot-Example](https://github.com/user-attachments/assets/0640c871-dc03-46c9-980b-872254192ac0)
 
 ## Features
 
