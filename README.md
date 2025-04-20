@@ -2,7 +2,7 @@
 
 ![ForensIt Banner](https://img.shields.io/badge/ForensIt-v1.00-blue)
 
-ForensIt is a powerful file forensic analysis tool designed to help investigators analyze files and memory dumps efficiently. It provides a comprehensive suite of forensic tools and automated analysis capabilities.
+ForensIt is a powerful forensic analysis tool designed to help investigators analyze files and memory dumps efficiently. It provides a comprehensive suite of forensic tools and automated analysis capabilities.
 
 ## Features
 
