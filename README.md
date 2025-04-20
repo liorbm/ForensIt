@@ -1,4 +1,4 @@
-# ForensIt - Memory Forensic Analysis Tool
+# ForensIt - Files Forensic Analysis Tool
 
 ![ForensIt Banner](https://img.shields.io/badge/ForensIt-v1.00-blue)
 
@@ -55,7 +55,7 @@ sudo ./script.sh
 
 1. Run the script with root privileges
 2. The script will automatically check and install required dependencies
-3. Enter the memory dump filename when prompted
+3. Enter the filename when prompted
 4. Choose from the following analysis options:
    - 1: Foremost analysis
    - 2: Binwalk analysis
