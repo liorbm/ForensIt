@@ -1,9 +1,9 @@
-# ForensIt -  File Analysis Tool
+# Forensit -  File Analysis Tool
 
 ![ForensIt Banner](https://img.shields.io/badge/ForensIt-v1.00-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-ForensIt is a comprehensive file analysis and forensics tool that automates the process of analyzing files and memory dumps using various tools. It provides a user-friendly interface for performing analysis and generates detailed reports of the findings.
+Forensit is a comprehensive file analysis and forensics tool that automates the process of analyzing files and memory dumps using various tools. It provides a user-friendly interface for performing analysis and generates detailed reports of the findings.
 
 ![ForensIt-Screenshot-Example](https://github.com/user-attachments/assets/0640c871-dc03-46c9-980b-872254192ac0)
 
